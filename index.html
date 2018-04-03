@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<title>Event app</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" href="main.css">
+			<link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
+			<script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	          crossorigin="anonymous"></script>
+		 </head>
+		<body>
+			<div class="overlay">
+<!-- Top bar and Nav -->
+				<header class="top-bar" role="banner">
+					<div class="name-container">
+						<h1 class="app-name">Entertain.me</h1>
+						<p class="tag-line">Let's do something!</p>
+					</div>
+<!-- Main page form -->
+				<div class="form-container">
+					<form action="#" class="js-form" id="form">
+						<feildset>
+							<label for="userLocal">Where should we look?</label>
+							<input type="text" class="js-location-query query" placeholder="Enter city, state, or zip" required>
+						</feildset>
+						<fieldset class="location-container">
+							<label for="category-select" class="keyword-prompt">What do you want to do?</label>
+							<select name="category-select" class="js-category-select category-select query" required>
+								  <option class="category-option" value="music">Concerts</option>
+								  <option class="category-option" value="conference">Conferences</option>
+								  <option class="category-option" value="comedy">Comedy</option>
+								  <option class="category-option" value="learning_eduction">Education</option>
+								  <option class="category-option" value="family_fun_kids">Family</option>
+								  <option class="category-option" value="festivals_parades">Festivals</option>
+								  <option class="category-option" value="movies_film">Film</option>
+								  <option class="category-option" value="food">Food</option>
+								  <option class="category-option" value="fundraisers">Fundraisers</option>
+								  <option class="category-option" value="art">Galleries</option>
+								  <option class="category-option" value="support">Health</option>
+								  <option class="category-option" value="holiday">Holiday</option>
+								  <option class="category-option" value="books">Library</option>
+								  <option class="category-option" value="attractions">Museums</option>
+								  <option class="category-option" value="community">Neighborhood</option>
+								  <option class="category-option" value="business">Networking</option>
+								  <option class="category-option" value="singles_social">Night Life</option>
+								  <option class="category-option" value="clubs_associations">Organizations</option>
+								  <option class="category-option" value="performing_arts">Performing Arts</option>
+								  <option class="category-option" value="animals">Pets</option>
+								  <option class="category-option" value="science">Science</option>
+								  <option class="category-option" value="religion_spirituality">Spirituality</option>
+								  <option class="category-option" value="sports">Sports</option>
+								 <option class="category-option" value="technology">Technology</option>
+								 <option class="category-option" value="other">Other</option>
+							</select>
+						</fieldset>
+						<fieldset>
+							<label for="query" class="keyword-prompt">Anything in particular?</label>
+							<input type="text" class="js-keyword-query query" placeholder="Bands, venues, food, etc...">
+						</fieldset>
+						<fieldset class="radius-container"> 
+							<label for="radius">Within</label>
+							<select class="js-radius-query" name="radius">
+								<option class="radius-option" value="5">5</option>
+								<option class="radius-option" value="10" selected>10</option>
+								<option class="radius-option" value="15">15</option>
+								<option class="radius-option" value="20">20</option>
+								<option class="radius-option" value="30">30</option>
+								<option class="radius-option" value="50">50</option>
+								<option class="radius-option" value="75">75</option>
+								<option class="radius-option" value="100">100</option>
+								<option class="radius-option" value="1000000">any</option>
+							</select>
+								<span class="miles">miles</span>
+						</fieldset>
+						<div>
+							<button type="submit" class="js-form-submit submit">Let's do Something!</button>
+						</div>
+					</form>
+				</div>
+			<div class="js-display display hide"></div>
+			<footer class="hide">
+				<nav class="more">
+					<button class="previous-page" type="button">Previous</button>
+					<button class="next-page" type="button">next</button>
+				</nav>
+			</footer>
+		<script src="main.js"></script>
+		</body>
+	</html>

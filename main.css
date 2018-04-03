@@ -1,0 +1,73 @@
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+.hide {
+	display: none;
+}
+
+fieldset {
+	border: 0;
+}
+
+/* Results */
+
+.display {
+	border: 1px solid red;
+}
+
+.individual-result {
+	border: 2px solid black;
+	margin-top: .2em;
+	height: 13vh;
+	width: 100%;
+	position: relative;
+	top: 0;
+}
+
+.descImg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 20%;
+}
+
+.title {
+	position: absolute;
+	top: 0;
+	left: 22%;
+	font-size: .9em;
+}
+
+.time {
+	position: absolute;
+	bottom: 3em;
+	left: 21%;
+	font-size: .7em;
+}
+
+.venue {
+	position: absolute;
+	left: 22%;
+	bottom: 1.6em;
+	max-width: 50%;
+	font-size: .7em;
+}
+
+.location {
+	position: absolute;
+	left: 22%;
+	bottom: .25em;
+	max-width: 50%;
+	font-size: .7em;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
