@@ -36,6 +36,28 @@ function sideNavToggle() {
 	});
 }
 
+function setByCategoryNav() {
+	$('.sidenav').find('a').not('.closebtn').on('click', function(){
+		currentKeyword = currentKeyword;
+		if (currentLocation === null) {
+			currentLocation = $('.js-location-query').val();
+		} else {
+			currentLocation = currentLocation;
+		}
+    	currentRadius = 10;
+    	currentCategory = "";
+    	currentCategory = event.currentTarget.id;
+    	console.log(currentKeyword);
+    	console.log(currentLocation);
+    	console.log(currentRadius);
+    	console.log(currentCategory);
+    	currentPage = 1;
+    	$('.next-page').removeClass('hide');
+    	$('.sidenav').css("width", "0");
+		getDataFromApi(currentKeyword, currentLocation, currentRadius, currentCategory, currentPage, displaySearchData);
+	});
+}
+
 function nextPage() {
 	$('.next-page').on('click', function() {
 		currentKeyword = currentKeyword;
