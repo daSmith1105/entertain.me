@@ -99,7 +99,7 @@ function getDataFromApi(term, local, range, category, page, callback) {
     app_key: api_key
   }
 
-  $.getJSON(PROXY_SEARCH, query, callback);
+  $.getJSON(EVENT_SEARCH_URL, query, callback);
 
 } 
 
