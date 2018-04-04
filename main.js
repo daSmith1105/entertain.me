@@ -27,6 +27,22 @@ function getCurrentLocation () {
     }
 }
 
+function changeSearchLocation() {
+	$('.change-location-button').on('click', function() {
+		currentKeyword = currentKeyword;
+		currentLocation = $('.js-change-location').val();
+		currentRadius = currentRadius ;
+    	currentCategory = currentCategory;
+		console.log(currentKeyword);
+    	console.log(currentLocation);
+    	console.log(currentRadius);
+    	console.log(currentCategory);
+    	currentPage = 1;
+    	$('.js-change-location').val('');
+		getDataFromApi(currentKeyword, currentLocation, currentRadius, currentCategory, currentPage, displaySearchData);
+	});
+}
+
 function navBack() {
 	$('.back').on('click', function() {
 		$('.form-container').removeClass('hide');
@@ -162,6 +178,7 @@ function displaySearchData(data) {
 		  $('.next-page').removeClass('hide');
 } else {
 		  $('.next-page').addClass('hide');
+		  // add alert modal for no additional results here
 	}
 }
 
