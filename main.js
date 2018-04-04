@@ -9,6 +9,51 @@ let currentCategory = "";
 let currentRadius = "";
 let currentPage = 1;
 
+function navBack() {
+	$('.back').on('click', function() {
+		$('.form-container').removeClass('hide');
+		$('.js-form').removeClass('hide');
+		$('footer').addClass('hide');
+		$('.js-display').addClass('hide');
+		$('.result-nav').addClass('hide');
+		currentPage = 1;
+	});
+}
+
+function nextPage() {
+	$('.next-page').on('click', function() {
+		currentKeyword = currentKeyword;
+    	currentLocation = currentLocation;
+    	currentRadius = currentRadius ;
+    	currentCategory = currentCategory;
+    	currentPage++;
+    	console.log(currentKeyword);
+    	console.log(currentLocation);
+    	console.log(currentRadius);
+    	console.log(currentCategory);
+    	console.log(currentPage);
+
+		getDataFromApi(currentKeyword, currentLocation, currentRadius, currentCategory, currentPage, displaySearchData);
+	});
+}
+
+function previousPage() {
+	$('.previous-page').on('click', function() {
+		currentKeyword = currentKeyword;
+    	currentLocation = currentLocation;
+    	currentRadius = currentRadius;
+    	currentCategory = currentCategory;
+    	currentPage--;
+    	console.log(currentKeyword);
+    	console.log(currentLocation);
+    	console.log(currentRadius);
+    	console.log(currentCategory);
+    	console.log(currentPage);
+
+		getDataFromApi(currentKeyword, currentLocation, currentRadius, currentCategory, currentPage, displaySearchData);
+	});
+}
+
 function renderResult(result) {
 	console.log(result);
  	if (result.image !== null) {
@@ -39,7 +84,7 @@ function displaySearchData(data) {
 	  $('.js-display').removeClass('hide');
 	  $('.form-container').addClass('hide');
 	  $('.js-form').addClass('hide');
-	  $('.result-alert').removeClass('hide');
+	  $('.result-nav').removeClass('hide');
 	  $('footer').removeClass('hide');
 }
 
@@ -75,6 +120,7 @@ function watchMainSubmit() {
     console.log(currentCategory);
  
     queryRadius.val("10");
+    queryLocation.val("");
 
     getDataFromApi(currentKeyword, currentLocation, currentRadius, currentCategory, currentPage, displaySearchData);
   });
@@ -82,6 +128,9 @@ function watchMainSubmit() {
 
 function appLoad() {
 	watchMainSubmit();
+	navBack();
+	nextPage();
+	previousPage();
 }
 
 $(appLoad);

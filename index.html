@@ -12,19 +12,21 @@
 		 </head>
 		<body>
 			<div class="overlay">
-<!-- Top bar and Nav -->
 				<header class="top-bar" role="banner">
 					<div class="name-container">
 						<h1 class="app-name">Entertain.me</h1>
 						<p class="tag-line">Let's do something!</p>
 					</div>
-<!-- Main page form -->
+					<div class="result-nav hide">
+						<button class="back" type="button">&#8617;</button>
+					</div>
+				</header>
 				<div class="form-container">
 					<form action="#" class="js-form" id="form">
-						<feildset>
+						<fieldset>
 							<label for="userLocal">Where should we look?</label>
 							<input type="text" class="js-location-query query" placeholder="Enter city, state, or zip" required>
-						</feildset>
+						</fieldset>
 						<fieldset class="location-container">
 							<label for="category-select" class="keyword-prompt">What do you want to do?</label>
 							<select name="category-select" class="js-category-select category-select query" required>
