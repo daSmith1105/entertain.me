@@ -98,7 +98,8 @@
 }
 
 form {
-	margin-top: 5em;
+	margin-top: 5.6em;
+	text-align: center;
 }
 
 fieldset {
@@ -108,7 +109,7 @@ fieldset {
 .category-container {
 	width: 100vw;
 	position: absolute;
-	top: 3.4em;
+	top: 3.6em;
 	right: 0;
 	text-align: center;
 }
@@ -118,6 +119,24 @@ fieldset {
 	border: 2px solid black;
 	height: 1.8em;
 	font-size: 1em;
+}
+
+.query {
+	border: 1px solid black;
+	padding: .5em;
+}
+
+.location-query, .category-select, .keyword-query {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: .75em;
+}
+
+.submit {
+	border: 2px solid black;
+	margin-top: 1em;
+	padding: 1em;
 }
 
 /* Results */
@@ -140,6 +159,21 @@ fieldset {
 	float: left;
 	border: 4px solid black;
 	font-size: 1.2em;
+}
+
+.result-alert {
+	font-size: 1.1em;
+	position: absolute;
+	top: 4em;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 50%;
+	color: black;
+}
+
+.cPage {
+	font-size: .9em;
 }
 
 .individual-result {
@@ -189,9 +223,11 @@ fieldset {
 	font-size: .7em;
 }
 
-.footer {
-	position: fixed;
-	bottom: 0;
+.bottom-bar {
+	position: absolute;
+	bottom: 6em;
 	left: 0;
 	width: 100%;
+	z-index: 2;
+	text-align: center;
 }

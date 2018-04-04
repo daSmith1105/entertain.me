@@ -15,6 +15,7 @@ function navBack() {
 		$('.form-container').removeClass('hide');
 		$('.js-form').removeClass('hide');
 		$('.category-container').removeClass('hide');
+		$('.result-alert').addClass('hide');
 		$('footer').addClass('hide');
 		$('.js-display').addClass('hide');
 		$('.result-nav').addClass('hide');
@@ -54,6 +55,7 @@ function setByCategoryNav() {
     	currentPage = 1;
     	$('.next-page').removeClass('hide');
     	$('.sidenav').css("width", "0");
+
 		getDataFromApi(currentKeyword, currentLocation, currentRadius, currentCategory, currentPage, displaySearchData);
 	});
 }
@@ -96,6 +98,7 @@ function renderResult(result) {
 	console.log(result);
  	if (result.image !== null) {
 		console.log(`${result.image.medium.url}`);
+		$('.cPage').html(currentPage);
 		return `
 	    <div class="individual-result">
 	      	<p class="title">${result.title}</p>
@@ -105,6 +108,7 @@ function renderResult(result) {
 	      <p class="location">${result.city_name}, ${result.region_abbr}</p>
 	    </div>`;
 	} else {
+		$('.cPage').html(currentPage);
 		return `
 	    <div class="individual-result">
 	      	<p class="title">${result.title}</p>
@@ -120,6 +124,7 @@ function displaySearchData(data) {
 	  const results = data.events.event.map((item, index) => renderResult(item));
 	  $('.js-display').html(results);
 	  $('.js-display').removeClass('hide');
+	  $('.result-alert').removeClass('hide');
 	  $('.form-container').addClass('hide');
 	  $('.js-form').addClass('hide');
 	  $('.category-container').addClass('hide');
@@ -168,6 +173,7 @@ function watchMainSubmit() {
 function appLoad() {
 	watchMainSubmit();
 	sideNavToggle();
+	setByCategoryNav();
 	navBack();
 	nextPage();
 	previousPage();
