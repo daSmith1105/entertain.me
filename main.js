@@ -9,6 +9,25 @@ let currentCategory = "";
 let currentRadius = "";
 let currentPage = 1;
 
+function getCurrentLocation () {
+	 if ("geolocation" in navigator){ 
+        const geo = navigator.geolocation;
+        geo.getCurrentPosition(function(position){ 
+                const userLat = position.coords.latitude;
+                const userLong = position.coords.longitude;
+                const userLocation = `${userLat},${userLong}`;
+                console.log('User Position:' + userLocation);
+                $('.js-location-query').attr('value', userLocation);
+                currentLocation = userLocation;
+                console.log(currentLocation);
+            });
+
+    } else {
+        console.log("Browser doesn't support geolocation!");
+        currentLocation = '90210';
+    }
+}
+
 
 function navBack() {
 	$('.back').on('click', function() {
@@ -171,6 +190,7 @@ function watchMainSubmit() {
 }
 
 function appLoad() {
+	getCurrentLocation();
 	watchMainSubmit();
 	sideNavToggle();
 	setByCategoryNav();
