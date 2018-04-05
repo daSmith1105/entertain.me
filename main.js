@@ -71,6 +71,14 @@ function sideNavToggle() {
 	});
 }
 
+function noResultToggle() {
+	$('.js-no-result').removeClass('hide');
+//modal close
+	$('.js-no-result-close').on('click', function(){
+    	$('.js-no-result').addClass('hide');
+	});
+}
+
 function setByCategoryNav() {
 	$('.sidenav').find('a').not('.closebtn').on('click', function(){
 		currentKeyword = currentKeyword;
@@ -178,7 +186,7 @@ function displaySearchData(data) {
 		  $('.next-page').removeClass('hide');
 } else {
 		  $('.next-page').addClass('hide');
-		  // add alert modal for no additional results here
+		  noResultToggle();
 	}
 }
 
@@ -223,6 +231,7 @@ function appLoad() {
 	watchMainSubmit();
 	sideNavToggle();
 	setByCategoryNav();
+	changeSearchLocation();
 	navBack();
 	nextPage();
 	previousPage();

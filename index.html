@@ -28,7 +28,7 @@
 						<input type="text" class="js-change-location change-location" placeholder="Change search location">
 						<button class="change-location-button">Find</button>
 					</nav>
-					<p class="result-alert hide aria-live="assertive">Displaying page <span class="cPage"></span>
+					<p class="result-alert hide" aria-live="assertive">Displaying page <span class="cPage"></span>
 				</header>
 
 				<div class="form-container">
@@ -123,7 +123,10 @@
 					<a href="#" id="other">Other</a>
 				</div>
 			</nav> 
-
+			<div class="js-no-result no-result hide">
+				<div class="js-no-result-close no-result-close">&times;</div>
+				<p>Results not found.<br>Please resturn to search</p>
+			</div>
 			<footer class="bottom-bar">
 					<button class="previous-page hide" type="button">Previous</button>
 					<button class="next-page hide" type="button">next</button>
