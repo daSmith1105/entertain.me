@@ -159,7 +159,8 @@ function displayDetails(address) {
 	 	$('.previous-page').addClass('hide');
 	 	$('.returnToApp').addClass(`hide`);
 	 	$('.external-site').addClass(`hide`);
-	  })
+	 	checkPageCount(currentPage);
+	  });
 }
 
 function checkPageCount(page) {
@@ -220,6 +221,7 @@ function getDataFromApi(term, local, range, category, page, callback) {
     l: `${local}`,
     within: `${range}`,
     c: `${currentCategory}`,
+    sort_order: 'date',
     page_size: 4,
     page_number: currentPage,
     app_key: api_key
