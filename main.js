@@ -227,6 +227,13 @@ function getDataFromApi(term, local, range, category, page, callback) {
   	$.getJSON(EVENT_SEARCH_URL, query, callback);
 } 
 
+function watchSplash() {
+	$('.splash-go').on('click', function(){
+		$('.js-splash').addClass('hide');
+		('.slide')
+	});
+}
+
 function watchMainSubmit() {
   $('.js-form').submit(event => {
     event.preventDefault();
@@ -251,6 +258,7 @@ function watchMainSubmit() {
 }
 
 function appLoad() {
+	watchSplash();
 	getCurrentLocation();
 	watchMainSubmit();
 	sideNavToggle();

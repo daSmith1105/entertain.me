@@ -2,10 +2,67 @@
 * {
 	box-sizing: border-box;
 	margin: 0;
+	font-family: 'Viga', sans-serif;
 }
 
 .hide {
 	display: none;
+}
+
+.splash {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: grey;
+	text-align: center;
+	z-index: 1;
+}
+
+.splash h1 {
+	font-size: 2.5em;
+	margin-top: 1.8em;
+}
+
+.splash-logo {
+	height: 10em;
+	width: 10em;
+	position: absolute;
+	top: 8em;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.splash-label {
+	font-size: 1.6em;
+	position: absolute;
+	top: 11em;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.splash ul {
+	position: absolute;
+	top: 20.5em;
+	left: 0;
+}
+
+.splash li {
+	font-size: 1.2em;
+	list-style-type: none;
+	text-align: left;
+	margin-top: .25em;
+}
+
+.splash-tag {
+	font-size: 1.6em;
+	position: absolute;
+	top: 18em;
+	left: 1em;
+	border: 4px solid black;
 }
 
 .sidenav {
