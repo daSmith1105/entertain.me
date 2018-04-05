@@ -139,6 +139,29 @@ function previousPage() {
 	});
 }
 
+function displayDetails(address) {
+	$('.external-site').html(`<object class="embed" data=${address} />`);
+	$('.result-nav').addClass('hide');
+	$('.category-container').addClass('hide');
+	$('.result-alert').addClass('hide');
+	$('.js-display').addClass('hide');
+	$('.next-page').addClass('hide');
+	$('.previous-page').addClass('hide');
+	$('.returnToApp').removeClass(`hide`);
+	$('.external-site').removeClass(`hide`);
+
+	$('.return-button').on('click', function() {
+		$('.result-nav').removeClass('hide');
+		$('.category-container').removeClass('hide');
+		$('.result-alert').removeClass('hide');
+		$('.js-display').removeClass('hide');
+	 	$('.next-page').removeClass('hide');
+	 	$('.previous-page').addClass('hide');
+	 	$('.returnToApp').addClass(`hide`);
+	 	$('.external-site').addClass(`hide`);
+	  })
+}
+
 function checkPageCount(page) {
 	if (page >= 2) {
 		$(document).find('.previous-page').removeClass('hide');
@@ -159,6 +182,7 @@ function renderResult(result) {
 	      <br>
 	      <p class="venue">@ ${result.venue_name}</p>
 	      <p class="location">${result.city_name}, ${result.region_abbr}</p>
+	      <button class="details" onclick='displayDetails("${result.url}")'>Learn More</button>
 	    </div>`;
 	} else {
 		$('.cPage').html(currentPage);
@@ -170,6 +194,7 @@ function renderResult(result) {
 	      <p class="venue">@ ${result.venue_name}</p>
 	      <p class="time">${result.start_time}</p>
 	      <p class="location">${result.city_name}, ${result.region_abbr}</p>
+	      <button class="details" onclick='displayDetails("${result.url}")'>Learn More</button>
 	    </div>`; };
 }
 
@@ -181,7 +206,6 @@ function displaySearchData(data) {
 		  $('.result-alert').removeClass('hide');
 		  $('.form-container').addClass('hide');
 		  $('.js-form').addClass('hide');
-		  $('.category-container').addClass('hide');
 		  $('.result-nav').removeClass('hide');
 		  $('.next-page').removeClass('hide');
 } else {

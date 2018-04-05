@@ -176,14 +176,14 @@ fieldset {
 	font-size: 1em;
 	position: fixed;
 	width: 100%;
-	top: 4em;
+	top: 6em;
 	left: 0;
 	text-align: center;
 
 }
 
 .display {
-	margin-top: 8.5em;
+	margin-top: 10em;
 }
 
 .back {
@@ -217,7 +217,7 @@ fieldset {
 .result-alert {
 	font-size: 1.1em;
 	position: absolute;
-	top: 6em;
+	top: 7.5em;
 	left: 0;
 	right: 0;
 	margin: auto;
@@ -276,9 +276,59 @@ fieldset {
 	font-size: .7em;
 }
 
+.details {
+	position: absolute;
+	bottom: 0;
+	right:0;
+	background: grey;
+	border: 4px solid black;
+	padding: .25em;
+	font-size: .8em;
+	color: white;
+}
+
+.external-site {
+	position: absolute;
+	top: -7em;
+	left: 0;
+	height: 100%;
+	width: 100vw;
+}
+
+.embed {
+	min-height: 100vh;
+	min-width: 100vw;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.returnToApp {
+	height: 2.5em;
+	width: 100%;
+	position: fixed;
+	top: 3.5em;
+	left: 0;
+	z-index: 2;
+	background: grey;
+
+}
+
+.return-button {
+	position: absolute;
+	top: .25em;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 95vw;
+	border: 2px solid black;
+	height: 1.8em;
+	font-size: 1em;
+}
+
 .bottom-bar {
 	position: absolute;
-	bottom: 6em;
+	bottom: 4em;
 	left: 0;
 	width: 100%;
 	z-index: 2;
