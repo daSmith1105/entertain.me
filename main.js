@@ -95,9 +95,10 @@ function setByCategoryNav() {
     	console.log(currentRadius);
     	console.log(currentCategory);
     	currentPage = 1;
-    	$('.next-page').removeClass('hide');
     	$('.previous-page').addClass('hide');
+    	$('.next-page').addClass('hide');
     	$('.sidenav').css("width", "0");
+    	$('.external-site').addClass('hide');
 
 		getDataFromApi(currentKeyword, currentLocation, currentRadius, currentCategory, currentPage, displaySearchData);
 	});
@@ -237,7 +238,7 @@ function watchSplash() {
 }
 
 function watchMainSubmit() {
-  $('.js-form').submit(event => {
+  $('.js-form').on('submit', function(event) {
     event.preventDefault();
     const queryLocation = $(event.currentTarget).find('.js-location-query');
     const queryRadius = $(event.currentTarget).find('.js-radius-query');

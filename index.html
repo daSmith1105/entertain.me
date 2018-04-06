@@ -35,21 +35,23 @@
 					<p class="result-alert hide" aria-live="assertive">Displaying page <span class="cPage"></span>
 				</header>
 				<div class="js-splash splash">
-					<h1>Entertain.Me</h1>
-					<img class="splash-logo splash-go" src="https://cdn1.iconfinder.com/data/icons/outlined-input-icons-gestures/200/signs_hi5-512.png" alt="logo">
-					<label for="how it works" class="splash-label">How it works:</label>
-					<ul name ="how it works">
-						<li>Select Your Search Area</li>
-						<li>Select A Category</li>
-						<li>Find Awesome Things To Do</li>
-					</ul>
-                    <button type="button" class="splash-tag splash-go">Let's Do Something!</p>
+					<div class="splash-interior">
+						<h1>Entertain.Me</h1>
+						<img class="splash-logo splash-go" src="https://cdn1.iconfinder.com/data/icons/outlined-input-icons-gestures/200/signs_hi5-512.png" alt="logo">
+						<label for="how it works" class="splash-label">How it works:</label>
+						<ul name ="how it works">
+							<li>Select Your Search Area</li>
+							<li>Select A Category</li>
+							<li>Find Awesome Things To Do</li>
+						</ul>
+	                    <button type="button" class="splash-tag splash-go">Let's Do Something!</button>
+                	</div>
                 </div>
 				<div class="form-container">
 					<form action="#" class="js-form" id="form">
 						<fieldset>
-							<label for="userLocal">Where should we look?</label>
-							<input type="text" class="js-location-query location-query query" placeholder="Enter city, state, or zip" required>
+							<label for="userLocal" class="where-label">Where should we look?</label>
+							<input type="text" class="js-location-query location-query query" placeholder="Enter city, state, or zip" name="userLocal" required>
 						</fieldset>
 						<fieldset class="location-container">
 							<label for="category-select" class="keyword-prompt">What do you want to do?</label>
@@ -87,7 +89,7 @@
 						</fieldset>
 						<fieldset class="radius-container"> 
 							<label for="radius">Within</label>
-							<select class="js-radius-query query" name="radius">
+							<select class="js-radius-query radius-select" name="radius">
 								<option class="radius-option" value="5">5</option>
 								<option class="radius-option" value="10" selected>10</option>
 								<option class="radius-option" value="15">15</option>
@@ -138,13 +140,12 @@
 			</nav> 
 			<div class="js-no-result no-result hide">
 				<div class="js-no-result-close no-result-close">&times;</div>
-				<p>Results not found.<br>Please resturn to search</p>
+				<p>Results not found.<br><br>Please return to search</p>
 			</div>
 			<footer class="bottom-bar">
-					<button class="previous-page hide" type="button">Previous</button>
-					<button class="next-page hide" type="button">next</button>
+					<input type="image" class="previous-page hide" src="https://cdn3.iconfinder.com/data/icons/3d-printing-icon-set/512/Undo.png">
+					<input type="image" class="next-page hide" src="https://cdn3.iconfinder.com/data/icons/3d-printing-icon-set/512/Redo.png">
 			</footer>
-
 			<div class="js-display display hide"></div>
 			<div class="external-site hide"></div>
 		<script src="main.js"></script>
