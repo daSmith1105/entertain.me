@@ -146,6 +146,7 @@ function displayDetails(address) {
 	$('.category-container').addClass('hide');
 	$('.result-alert').addClass('hide');
 	$('.js-display').addClass('hide');
+	$('.page-alert').addClass('hide');
 	$('.next-page').addClass('hide');
 	$('.previous-page').addClass('hide');
 	$('.returnToApp').removeClass(`hide`);
@@ -158,6 +159,7 @@ function displayDetails(address) {
 		$('.js-display').removeClass('hide');
 	 	$('.next-page').removeClass('hide');
 	 	$('.previous-page').addClass('hide');
+	 	$('.page-alert').removeClass('hide');
 	 	$('.returnToApp').addClass(`hide`);
 	 	$('.external-site').addClass(`hide`);
 	 	checkPageCount(currentPage);
@@ -203,13 +205,15 @@ function renderResult(result) {
 function displaySearchData(data) {
 	if (data.events !== null) {
 	  const results = data.events.event.map((item, index) => renderResult(item));
+	  	  checkPageCount(currentPage);
 		  $('.js-display').html(results);
 		  $('.js-display').removeClass('hide');
 		  $('.result-alert').removeClass('hide');
 		  $('.form-container').addClass('hide');
 		  $('.js-form').addClass('hide');
 		  $('.result-nav').removeClass('hide');
-		  $('.next-page').removeClass('hide');
+		  $('.page-alert').removeClass('hide');
+		  $('previous-page').addClass('hide');
 } else {
 		  $('.next-page').addClass('hide');
 		  noResultToggle();
@@ -227,7 +231,7 @@ function getDataFromApi(term, local, range, category, page, callback) {
     page_number: currentPage,
     app_key: api_key
   }
-  	$.getJSON(EVENT_SEARCH_URL, query, callback);
+  	$.getJSON(PROXY_SEARCH, query, callback);
 } 
 
 function watchSplash() {

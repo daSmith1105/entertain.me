@@ -25,14 +25,18 @@
 							<button class="js-all-button all-button">View all categories</button>
 					</nav>
 					<div class='returnToApp hide'>
-							<button type="button" class="return-button">&#171;&nbsp;&#171;&nbsp; Return to Entertain.Me</button>
-						</div>
+						<button type="button" class="return-button">&#171;&nbsp;&#171;&nbsp; Return to Entertain.Me</button>
+					</div>
 					<nav class="result-nav hide">
 						<button class="back" type="button">&#8617;</button>
 						<input type="text" class="js-change-location change-location" placeholder="Change search location">
 						<button class="change-location-button">Find</button>
 					</nav>
-					<p class="result-alert hide" aria-live="assertive">Displaying page <span class="cPage"></span>
+					<div class="page-alert hide">
+						<input type="image" class="previous-page hide" src="https://cdn3.iconfinder.com/data/icons/3d-printing-icon-set/512/Undo.png">
+						<p class="result-alert" aria-live="assertive">Displaying page <span class="cPage"></span></p>
+						<input type="image" class="next-page" src="https://cdn3.iconfinder.com/data/icons/3d-printing-icon-set/512/Redo.png">
+					</div>
 				</header>
 				<div class="js-splash splash">
 					<div class="splash-interior">
@@ -142,10 +146,6 @@
 				<div class="js-no-result-close no-result-close">&times;</div>
 				<p>Results not found.<br><br>Please return to search</p>
 			</div>
-			<footer class="bottom-bar">
-					<input type="image" class="previous-page hide" src="https://cdn3.iconfinder.com/data/icons/3d-printing-icon-set/512/Undo.png">
-					<input type="image" class="next-page hide" src="https://cdn3.iconfinder.com/data/icons/3d-printing-icon-set/512/Redo.png">
-			</footer>
 			<div class="js-display display hide"></div>
 			<div class="external-site hide"></div>
 		<script src="main.js"></script>
