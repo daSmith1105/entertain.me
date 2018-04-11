@@ -12,53 +12,55 @@
 		 </head>
 		<body>
 			<div class="overlay">
-				<header class="top-bar" role="banner">
-					<nav class="nav-burger">
-						<span class="burger-icon">&#9776;</span>
-					</nav>
-					<div class="name-container">
+				<div class="js-splash splash">
+					<div class="splash-interior col-6">
+						<h1>Entertain.Me</h1>
+						<img class="splash-logo splash-go row" src="https://cdn1.iconfinder.com/data/icons/outlined-input-icons-gestures/200/signs_hi5-512.png" alt="logo">
+						<label for="how it works" class="splash-label row">How it works:</label>
+						<ul name ="how it works" class="row">
+							<li>Select Your Search Area</li>
+							<li>Select A Category</li>
+							<li>Find Awesome Things To Do!!</li>
+						</ul>
+	                    <button type="button" class="splash-tag splash-go row">Let's Do Something!</button>
+                	</div>
+                </div>
+				<header class="top-bar row" role="banner">
+						<p class="burger-icon">&#9776;</p>
 						<img class="logo" src="https://cdn1.iconfinder.com/data/icons/outlined-input-icons-gestures/200/signs_hi5-512.png" alt="logo">
-						<h1 class="app-name">Entertain.me</h1>
-						<p class="tag-line">Let's do something!</p>
-					</div>
-					<nav class="category-container">
-							<button class="js-all-button all-button">View all categories</button>
+						<div class="app-text">
+							<h1 class="app-name">Entertain.me</h1>
+							<p class="tag-line">Let's do something!</p>
+						</div>
+					<nav class="category-container row">
+							<button class="js-all-button all-button col-6">View all categories</button>
 					</nav>
-					<div class='returnToApp hide'>
+					<div class='returnToApp row hide'>
 						<button type="button" class="return-button">&#171;&nbsp;&#171;&nbsp; Return to Entertain.Me</button>
 					</div>
 					<nav class="result-nav hide">
 						<button class="back" type="button">&#8617;</button>
-						<input type="text" class="js-change-location change-location" placeholder="Change search location">
-						<button class="change-location-button">Find</button>
+						<div class="change-location-container">
+							<input type="text" class="js-change-location change-location" placeholder="Change search location">
+							<button class="change-location-button">Find</button>
+						</div>
 					</nav>
-					<div class="page-alert hide">
-						<input type="image" class="previous-page hide" src="https://cdn3.iconfinder.com/data/icons/3d-printing-icon-set/512/Undo.png">
-						<p class="result-alert" aria-live="assertive">Displaying page <span class="cPage"></span></p>
-						<input type="image" class="next-page" src="https://cdn3.iconfinder.com/data/icons/3d-printing-icon-set/512/Redo.png">
+					<div class="page-alert row hide">
+						<p class="previous-page hide">&laquo;</p>
+						<p class="result-alert" aria-live="assertive">Displaying page <span class="cPage">1</span></p>
+						<p class="next-page">&raquo;</p>
 					</div>
 				</header>
-				<div class="js-splash splash">
-					<div class="splash-interior">
-						<h1>Entertain.Me</h1>
-						<img class="splash-logo splash-go" src="https://cdn1.iconfinder.com/data/icons/outlined-input-icons-gestures/200/signs_hi5-512.png" alt="logo">
-						<label for="how it works" class="splash-label">How it works:</label>
-						<ul name ="how it works">
-							<li>Select Your Search Area</li>
-							<li>Select A Category</li>
-							<li>Find Awesome Things To Do</li>
-						</ul>
-	                    <button type="button" class="splash-tag splash-go">Let's Do Something!</button>
-                	</div>
-                </div>
 				<div class="form-container">
 					<form action="#" class="js-form" id="form">
 						<fieldset>
 							<label for="userLocal" class="where-label">Where should we look?</label>
+							<br>
 							<input type="text" class="js-location-query location-query query" placeholder="Enter city, state, or zip" name="userLocal" required>
 						</fieldset>
 						<fieldset class="location-container">
 							<label for="category-select" class="keyword-prompt">What do you want to do?</label>
+							<br>
 							<select name="category-select" class="js-category-select category-select query" required>
 								  <option class="category-option" value="music">Concerts</option>
 								  <option class="category-option" value="conference">Conferences</option>
@@ -89,6 +91,7 @@
 						</fieldset>
 						<fieldset>
 							<label for="query" class="keyword-prompt">Anything in particular?</label>
+							<br>
 							<input type="text" class="js-keyword-query keyword-query query" placeholder="Bands, venues, food, etc...">
 						</fieldset>
 						<fieldset class="radius-container"> 
@@ -106,7 +109,7 @@
 							</select>
 								<span class="miles">miles</span>
 						</fieldset>
-						<div>
+						<div class="submit-container">
 							<button type="submit" class="js-form-submit submit">Let's do Something!</button>
 						</div>
 					</form>
@@ -146,7 +149,7 @@
 				<div class="js-no-result-close no-result-close">&times;</div>
 				<p>Results not found.<br><br>Please return to search</p>
 			</div>
-			<div class="js-display display hide"></div>
+			<div class="js-display display col-10 hide"></div>
 			<div class="external-site hide"></div>
 		<script src="main.js"></script>
 		</body>

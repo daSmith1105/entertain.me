@@ -180,28 +180,30 @@ function renderResult(result) {
 		console.log(`${result.image.medium.url}`);
 		$('.cPage').html(currentPage);
 		return `
-	    <div class="individual-result">
-	      	<p class="title">${result.title}</p>
-	      	<img class="descImg" src=${result.image.medium.url} alt=${result.title}>
-	      <br>
-	      <p class="venue">@ ${result.venue_name}</p>
-	      <p class="location">${result.city_name}, ${result.region_abbr}</p>
-	      <button class="details" onclick='displayDetails("${result.url}")'>Learn More</button>
+	    <div class="individual-result col-10">
+			<img class="descImg" src=${result.image.medium.url} alt="event image">
+			<div class="info-container">
+				<p class="title">${result.title}</p>
+				<p class="time">${result.start_time}</p>
+				<p class="venue">@ ${result.venue_name}</p>
+				<p class="location">${result.city_name}, ${result.region_abbr}</p>
+		    </div>
+			<button class="details" onclick='displayDetails("${result.url}")'>More</button>
 	    </div>`;
 	} else {
 		$('.cPage').html(currentPage);
 		return `
-	    <div class="individual-result">
-	      	<p class="title">${result.title}</p>
-	      	<img class="descImg" src="https://png.icons8.com/ios/1600/no-camera.png" alt="no image available">
-	      <br>
-	      <p class="venue">@ ${result.venue_name}</p>
-	      <p class="time">${result.start_time}</p>
-	      <p class="location">${result.city_name}, ${result.region_abbr}</p>
-	      <button class="details" onclick='displayDetails("${result.url}")'>Learn More</button>
+	    <div class="individual-result col-10">
+			<img class="descImg" src="https://png.icons8.com/ios/1600/no-camera.png" alt="no image available">
+			<div class="info-container">
+				<p class="title">${result.title}</p>
+				<p class="time">${result.start_time}</p>
+				<p class="venue">@ ${result.venue_name}</p>
+				<p class="location">${result.city_name}, ${result.region_abbr}</p>
+		    </div>
+			<button class="details" onclick='displayDetails("${result.url}")'>More</button>
 	    </div>`; };
 }
-
 function displaySearchData(data) {
 	if (data.events !== null) {
 	  const results = data.events.event.map((item, index) => renderResult(item));
@@ -276,4 +278,4 @@ function appLoad() {
 	previousPage();
 }
 
-$(appLoad);
+$(appLoad); 
