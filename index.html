@@ -14,41 +14,41 @@
 			<div class="overlay">
 				<div class="js-splash splash">
 					<div class="splash-interior col-6">
-						<h1>Entertain.Me</h1>
-						<img class="splash-logo splash-go row" src="https://cdn1.iconfinder.com/data/icons/outlined-input-icons-gestures/200/signs_hi5-512.png" alt="logo">
+						<h1 class="splash-heading">Entertain.Me</h1>
+						<img class="splash-logo splash-go row hover" src="https://cdn1.iconfinder.com/data/icons/outlined-input-icons-gestures/200/signs_hi5-512.png" alt="logo">
 						<label for="how it works" class="splash-label row">How it works:</label>
 						<ul name ="how it works" class="row">
 							<li>Select Your Search Area</li>
 							<li>Select A Category</li>
 							<li>Find Awesome Things To Do!!</li>
 						</ul>
-	                    <button type="button" class="splash-tag splash-go row">Let's Do Something!</button>
+	                    <button type="button" class="splash-tag splash-go col-6 hover">Let's Do Something!</button>
                 	</div>
                 </div>
-				<header class="top-bar row" role="banner">
-						<p class="burger-icon">&#9776;</p>
-						<img class="logo" src="https://cdn1.iconfinder.com/data/icons/outlined-input-icons-gestures/200/signs_hi5-512.png" alt="logo">
+				<header class="top-bar col-10" role="banner">
+						<p class="burger-icon hover">&#9776;</p>
+						<img class="logo hover" src="https://cdn1.iconfinder.com/data/icons/outlined-input-icons-gestures/200/signs_hi5-512.png" alt="logo">
 						<div class="app-text">
 							<h1 class="app-name">Entertain.me</h1>
 							<p class="tag-line">Let's do something!</p>
 						</div>
-					<nav class="category-container row">
-							<button class="js-all-button all-button col-6">View all categories</button>
+					<nav class="category-container col-12">
+							<button class="js-all-button all-button col-6 hover">View all categories</button>
 					</nav>
-					<div class='returnToApp row hide'>
-						<button type="button" class="return-button">&#171;&nbsp;&#171;&nbsp; Return to Entertain.Me</button>
+					<div class="return-to-app col-12 hide">
+						<button type="button" class="return-button col-6 hover">&#171;&nbsp;&#171;&nbsp; Return to Entertain.Me</button>
 					</div>
 					<nav class="result-nav hide">
-						<button class="back" type="button">&#8617;</button>
+						<button class="back hover" type="button">&#8617;</button>
 						<div class="change-location-container">
 							<input type="text" class="js-change-location change-location" placeholder="Change search location">
-							<button class="change-location-button">Find</button>
+							<button class="change-location-button hover">Find</button>
 						</div>
 					</nav>
 					<div class="page-alert row hide">
-						<p class="previous-page hide">&laquo;</p>
+						<p class="previous-page hover hide">&laquo;</p>
 						<p class="result-alert" aria-live="assertive">Displaying page <span class="cPage">1</span></p>
-						<p class="next-page">&raquo;</p>
+						<p class="next-page hover">&raquo;</p>
 					</div>
 				</header>
 				<div class="form-container">
@@ -61,7 +61,7 @@
 						<fieldset class="location-container">
 							<label for="category-select" class="keyword-prompt">What do you want to do?</label>
 							<br>
-							<select name="category-select" class="js-category-select category-select query" required>
+							<select name="category-select" class="js-category-select category-select query hover" required>
 								  <option class="category-option" value="music">Concerts</option>
 								  <option class="category-option" value="conference">Conferences</option>
 								  <option class="category-option" value="comedy">Comedy</option>
@@ -96,7 +96,7 @@
 						</fieldset>
 						<fieldset class="radius-container"> 
 							<label for="radius">Within</label>
-							<select class="js-radius-query radius-select" name="radius">
+							<select class="js-radius-query radius-select hover" name="radius">
 								<option class="radius-option" value="5">5</option>
 								<option class="radius-option" value="10" selected>10</option>
 								<option class="radius-option" value="15">15</option>
@@ -110,14 +110,14 @@
 								<span class="miles">miles</span>
 						</fieldset>
 						<div class="submit-container">
-							<button type="submit" class="js-form-submit submit">Let's do Something!</button>
+							<button type="submit" class="js-form-submit submit hover">Let's do Something!</button>
 						</div>
 					</form>
 				</div>	
 
 			<nav class="js-slideout">
 				<div class="sidenav">
-					<a href="#" class="closebtn">&times;</a>
+					<a href="#" class="closebtn hover">&times;</a>
 					<a href="#" id="music">Concerts</a>
 					<a href="#" id="conference">Conferences</a>
 					<a href="#" id="comedy">Comedy</a>
@@ -145,12 +145,17 @@
 					<a href="#" id="other">Other</a>
 				</div>
 			</nav> 
-			<div class="js-no-result no-result hide">
-				<div class="js-no-result-close no-result-close">&times;</div>
-				<p>Results not found.<br><br>Please return to search</p>
+			<div class="js-no-result no-result col-6 hide">
+				<div class="js-no-result-close no-result-close hover">&times;</div>
+				<img class="no-icon" src="https://cdn.iconscout.com/public/images/icon/premium/png-512/clean-cleaning-shine-35645ac48be64257-512x512.png" alt="no result icon">
+				<div class="no-result-text">
+					<p>Sorry,</p>
+					<p>Results not found.</p>
+					<p>Please return to search</p>
+				</div>
 			</div>
 			<div class="js-display display col-10 hide"></div>
-			<div class="external-site hide"></div>
+			<div class="external-site col-12 hide"></div>
 		<script src="main.js"></script>
 		</body>
 	</html>

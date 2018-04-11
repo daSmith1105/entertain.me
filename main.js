@@ -1,7 +1,7 @@
 "use strict";
 
 const EVENT_SEARCH_URL = 'http://api.eventful.com/json/events/search';
-const PROXY_SEARCH = "http://david-proxy.herokuapp.com/json/events/search"
+const PROXY_SEARCH = "http://david-proxy.bitbakeryapps.in/json/events/search"
 const api_key = 'FNKcDXFQvSBbpBvQ';
 let currentKeyword = "";
 let currentLocation = "";
@@ -57,6 +57,21 @@ function navBack() {
 	});
 }
 
+function homeReset() {
+	$('logo').on('click', function() {
+		$('.form-container').removeClass('hide');
+		$('.js-form').removeClass('hide');
+		$('.category-container').removeClass('hide');
+		$('.result-alert').addClass('hide');
+		$('.next-page').addClass('hide');
+		$('.previous-page').addClass('hide');
+		$('.js-display').addClass('hide');
+		$('.result-nav').addClass('hide');
+		$('.external-site').addClass('hide');
+		currentPage = 1; 
+	});
+}
+
 function sideNavToggle() {
 // nav open
 	$('.burger-icon').on('click', function(){
@@ -75,7 +90,7 @@ function noResultToggle() {
 	$('.js-no-result').removeClass('hide');
 //modal close
 	$('.js-no-result-close').on('click', function(){
-    	$('.js-no-result').addClass('hide');
+    	$('.js-no-result').fadeOut(1000);
 	});
 }
 
@@ -141,7 +156,7 @@ function previousPage() {
 }
 
 function displayDetails(address) {
-	$('.external-site').html(`<object class="embed" data=${address} />`);
+	$('.external-site').html(`<object class="embed col-10" data=${address} />`);
 	$('.result-nav').addClass('hide');
 	$('.category-container').addClass('hide');
 	$('.result-alert').addClass('hide');
@@ -212,6 +227,7 @@ function displaySearchData(data) {
 		  $('.js-display').removeClass('hide');
 		  $('.result-alert').removeClass('hide');
 		  $('.form-container').addClass('hide');
+		  $('.category-container').addClass('hide');
 		  $('.js-form').addClass('hide');
 		  $('.result-nav').removeClass('hide');
 		  $('.page-alert').removeClass('hide');
@@ -238,8 +254,11 @@ function getDataFromApi(term, local, range, category, page, callback) {
 
 function watchSplash() {
 	$('.splash-go').on('click', function(){
-		$('.js-splash').addClass('hide');
-		('.slide')
+		$('.splash-label').fadeOut(600);
+		$('.splash ul').fadeOut(400);
+		$('.splash button').fadeOut(350);
+		$('.splash-logo').css({'width': '100%', 'height': 'auto'});
+		$('.js-splash').fadeOut(4000);
 	});
 }
 
@@ -276,6 +295,7 @@ function appLoad() {
 	navBack();
 	nextPage();
 	previousPage();
+	homeReset();
 }
 
 $(appLoad); 
