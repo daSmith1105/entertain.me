@@ -9,6 +9,7 @@ let currentCategory = "";
 let currentRadius = "";
 let currentPage = 1;
 
+
 function getCurrentLocation () {
 	 if ("geolocation" in navigator){ 
         const geo = navigator.geolocation;
@@ -22,8 +23,11 @@ function getCurrentLocation () {
                 console.log(currentLocation);
              });
     } else {
-        console.log("Browser doesn't support geolocation!");
-        currentLocation = '90210';
+        $.getJSON("http://ip-api.com/json/?callback=?", function(data) {
+	   	console.log(`${data.zip}`);
+	   	$('.js-location-query').val(`${data.zip}`);
+	   	currentLocation = `${data.zip}`;
+		});
     }
 }
 
@@ -286,8 +290,8 @@ function watchMainSubmit() {
 }
 
 function appLoad() {
-	watchSplash();
 	getCurrentLocation();
+	watchSplash();
 	watchMainSubmit();
 	sideNavToggle();
 	setByCategoryNav();
