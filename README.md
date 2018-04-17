@@ -35,6 +35,6 @@ The category can be changed at any time using the navigation in the upper left c
 
 ## Planned Revisions
 
-- utilize an https API for increased security and more procise geo-location
+- utilize an https API for increased security and more precise geo-location
 - add current catergory results are being provided for on the results page
 - build out custom details screen for individual events
