@@ -15,6 +15,7 @@ function getCurrentLocation () {
 	   	console.log(`${data.zip}`);
 	   	$('.js-location-query').val(`${data.zip}`);
 	   	currentLocation = `${data.zip}`;
+	});
 }
 
 function changeSearchLocation() {
