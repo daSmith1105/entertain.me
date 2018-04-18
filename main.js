@@ -11,24 +11,10 @@ let currentPage = 1;
 
 
 function getCurrentLocation () {
-	 if ("geolocation" in navigator){ 
-        const geo = navigator.geolocation;
-        geo.getCurrentPosition(function(position){ 
-                const userLat = position.coords.latitude;
-                const userLong = position.coords.longitude;
-                const userLocation = `${userLat},${userLong}`;
-                console.log('User Position:' + userLocation);
-                $('.js-location-query').attr('value', userLocation);
-                currentLocation = userLocation;
-                console.log(currentLocation);
-             });
-    } else {
         $.getJSON("http://ip-api.com/json/?callback=?", function(data) {
 	   	console.log(`${data.zip}`);
 	   	$('.js-location-query').val(`${data.zip}`);
 	   	currentLocation = `${data.zip}`;
-		});
-    }
 }
 
 function changeSearchLocation() {
