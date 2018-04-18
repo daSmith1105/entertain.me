@@ -136,6 +136,7 @@
 	border: 6px solid black;
 	border-radius: .5em;
 	background: linear-gradient(to bottom right, orange, yellow);
+	z-index: 50;
 }
 
 .no-result-close {
