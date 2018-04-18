@@ -40,6 +40,7 @@ function navBack() {
 		$('.js-form').removeClass('hide');
 		$('.category-container').removeClass('hide');
 		$('.result-alert').addClass('hide');
+		$('.page-alert').removeClass('hide');
 		$('.next-page').addClass('hide');
 		$('.previous-page').addClass('hide');
 		$('.js-display').addClass('hide');
@@ -53,6 +54,7 @@ function homeReset() {
 		$('.form-container').removeClass('hide');
 		$('.js-form').removeClass('hide');
 		$('.category-container').removeClass('hide');
+		$('.page-alert').removeClass('hide');
 		$('.result-alert').addClass('hide');
 		$('.next-page').addClass('hide');
 		$('.previous-page').addClass('hide');
