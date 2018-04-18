@@ -155,7 +155,7 @@ function displayDetails(address) {
 	$('.page-alert').addClass('hide');
 	$('.next-page').addClass('hide');
 	$('.previous-page').addClass('hide');
-	$('.returnToApp').removeClass(`hide`);
+	$('.return-to-app').removeClass(`hide`);
 	$('.external-site').removeClass(`hide`);
 
 	$('.return-button').on('click', function() {
@@ -166,7 +166,7 @@ function displayDetails(address) {
 	 	$('.next-page').removeClass('hide');
 	 	$('.previous-page').addClass('hide');
 	 	$('.page-alert').removeClass('hide');
-	 	$('.returnToApp').addClass(`hide`);
+	 	$('.return-to-app').addClass(`hide`);
 	 	$('.external-site').addClass(`hide`);
 	 	checkPageCount(currentPage);
 	  });
