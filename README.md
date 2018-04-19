@@ -16,7 +16,7 @@ The category can be changed at any time using the navigation in the upper left c
 ## Screenshots
 
 ### Landing Page
-![alt text](https://image.ibb.co/h4J2SS/landing.png =100x40 "Landing Page")
+![alt text](https://image.ibb.co/h4J2SS/landing.png "Landing Page")
 ![alt text](https://image.ibb.co/j7Mwe7/landing_desktop.png "Landing Page")
 
 ### Search Page
@@ -25,11 +25,11 @@ The category can be changed at any time using the navigation in the upper left c
 
 ### Result Page
 ![alt text](https://image.ibb.co/ibs1Mn/results.png "Result Page")
-![alt text](https://image.ibb.co/ibs1Mn/results.png "Result Page")
+![alt text](https://image.ibb.co/e0cYsS/results_desktop.png "Result Page")
 
 ### Individual Event Details Page
 ![alt text](https://image.ibb.co/kbmaE7/details.png "Details Page")
-![alt text](https://image.ibb.co/kbmaE7/details.png "Details Page")
+![alt text](https://image.ibb.co/g458Rn/detail_desktop.png "Details Page")
 ## Technologies used:
 
 - HTML
