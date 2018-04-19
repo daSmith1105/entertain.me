@@ -16,7 +16,7 @@ The category can be changed at any time using the navigation in the upper left c
 ## Screenshots
 
 ### Landing Page
-![alt text](https://image.ibb.co/h4J2SS/landing.png =100x "Landing Page")
+![alt text](https://image.ibb.co/h4J2SS/landing.png =100x40 "Landing Page")
 ![alt text](https://image.ibb.co/j7Mwe7/landing_desktop.png "Landing Page")
 
 ### Search Page
