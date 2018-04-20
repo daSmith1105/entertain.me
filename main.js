@@ -53,7 +53,7 @@ function navBack() {
 }
 
 function homeReset() {
-	$('.logo').on('click', function() {
+	$('.logo, .home').on('click', function() {
 		$('html, body').animate({ scrollTop: 0 }, 'fast');
 		$('.form-container').removeClass('hide');
 		$('.js-form').removeClass('hide');
@@ -66,6 +66,7 @@ function homeReset() {
 		$('.result-nav').addClass('hide');
 		$('.return-to-app').addClass('hide');
 		$('.external-site').addClass('hide');
+		$('.sidenav').css("width", "0");
 		currentPage = 1;
 	});
 }
@@ -101,13 +102,12 @@ function noResultToggle() {
 	console.log('no results found');
 //modal close
 	$('.js-no-result-close').on('click', function(){
-    		$('.js-no-result').fadeOut(1000);
-		$('.next-page').addClass('hide');
+    		$('.js-no-result').addClass('hide');
 	});
 }
 
 function setByCategoryNav() {
-	$('.sidenav').find('a').not('.closebtn').on('click', function(){
+	$('.sidenav').find('a').not('.closebtn, .home').on('click', function(){
 		currentKeyword = currentKeyword;
 		if (currentLocation === null) {
 			currentLocation = $('.js-location-query').val();
