@@ -1,3 +1,8 @@
+* {
+  	box-sizing: border-box;
+  	margin: 0;
+  	font-family: 'Viga', sans-serif;
+}
 
 .hide {
 	display: none;
@@ -10,9 +15,9 @@
 
 .overlay {
 	background-image: linear-gradient(rgba(255, 246, 0, 0.3), rgba(0, 0, 100, 0.6)),
-    url('http://static1.squarespace.com/static/55c37beae4b0336075603f86/55c3cd80e4b01531b3208f2e/5603032be4b008bd0ad4e6fb/1486126957019/?format=1000w');
-    height: 100vh;
-    width: 100vw;
+    	url('http://static1.squarespace.com/static/55c37beae4b0336075603f86/55c3cd80e4b01531b3208f2e/5603032be4b008bd0ad4e6fb/1486126957019/?format=1000w');
+    	height: 100vh;
+    	width: 100vw;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 46% 0;
@@ -53,8 +58,8 @@
 	width: 40%;
 	-webkit-transition: width 2s, height 2s, -webkit-transform 2s;
 	-o-transition: width 2s, height 2s, transform 2s;
-    transition: width 2s, height 2s, transform 2s;
-    transition-duration: 3s;
+    	transition: width 2s, height 2s, transform 2s;
+    	transition-duration: 3s;
 }
 
 .splash-label {
@@ -86,41 +91,72 @@
 
 /* Side Navigation Styling */
 .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 1);
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    z-index: 1;
+    	height: 100%;
+    	width: 0;
+    	position: fixed;
+    	top: 0;
+    	left: 0;
+    	background-color: rgba(0, 0, 0, 1);
+    	overflow-x: hidden;
+    	transition: 0.5s;
+    	padding-top: 60px;
+    	z-index: 1;
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 1em;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+    	padding: 8px 8px 8px 32px;
+    	text-decoration: none;
+    	font-size: 1em;
+    	color: #818181;
+    	display: block;
+    	transition: 0.3s;
 }
 
 .sidenav a:hover {
-    color: #f1f1f1;
-    background-color: rgba(255, 165, 0, .6);
-    cursor: pointer;
-    color: black;
+    	color: #f1f1f1;
+    	background-color: rgba(255, 165, 0, .6);
+    	cursor: pointer;
+    	color: black;
 }
 
 .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 1.5em;
-    margin-left: .5em;
-    cursor: pointer;
+    	position: absolute;
+    	top: 0;
+    	right: 25px;
+    	font-size: 1.5em;
+    	margin-left: .5em;
+    	cursor: pointer;
+}
+
+/* AJAX Loading Modal Styling */
+
+.loading {
+   	width: 100%;
+   	height: 100%;
+  	 top: 0;
+   	left: 0;
+   	position: absolute;
+   	opacity: 0.7;
+   	background-color: #fff;
+   	text-align: center;
+   	z-index: 20;
+}
+
+.loading-content {
+   	position: absolute;
+   	top: 40%;
+   	left: 30%;
+   	text-align: center;
+   	z-index: 21;
+   	font-size: 170%;
+}
+
+.loading-img {
+   	position: absolute;
+   	top: 65%;
+   	left: 0;
+   	width: 80%;
+   	height: auto;
 }
 
 /* No Result Modal Styling */
@@ -136,6 +172,7 @@
 	border: 6px solid black;
 	border-radius: .5em;
 	background: linear-gradient(to bottom right, orange, yellow);
+	z-index: 50;
 }
 
 .no-result-close {
@@ -365,7 +402,7 @@
 
 form {
 	position: absolute;
-	top: 10em;
+	top: 8em;
 	left: 0;
 	right: 0;
 	margin: auto;
@@ -542,49 +579,41 @@ label {
 }
 
 .embed {
-	height: 120vh;
-	width: 100vw;
+	height: 200vh;
+	width: 100%;
 	position: absolute;
 	top: -7em;
 	left: 0;
-	overflow: hidden;
 }
 
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  font-family: 'Viga', sans-serif;
-}
-
-/* Resposnive Grid */
+/* Responsive Grid */
 .row {
-  max-width: 1000px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0 auto;
+ 	 max-width: 1000px;
+ 	 padding-left: 20px;
+  	padding-right: 20px;
+  	margin: 0 auto;
 }
 
 /* Clearfix */
 .row::before,
 .row::after {
-  display: table;
-  content: '';
+  	display: table;
+  	content: '';
 }
 
 .row::after {
-  clear: both;
+  	clear: both;
 }
 
 .col-3, .col-4, .col-6, .col-8, .col-10, .col-12 {
-  float: left;
-  padding-left: 1.04166666%;
-  padding-right: 1.04166666%;
+  	float: left;
+  	padding-left: 1.04166666%;
+	padding-right: 1.04166666%;
 }
 
 /* Mobile defaults */
 .col-3, .col-4, .col-6, .col-8, .col-10, .col-12 {
-  width: 100%;
+  	width: 100%;
 }
 
 
@@ -592,16 +621,22 @@ label {
 @media only screen and (min-width: 740px) {
 
 .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 1);
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    z-index: 1;
+    	height: 100%;
+    	width: 0;
+    	position: fixed;
+    	top: 0;
+    	left: 0;
+    	background-color: rgba(0, 0, 0, 1);
+    	overflow-x: hidden;
+    	transition: 0.5s;
+    	padding-top: 60px;
+    	z-index: 1;
+}
+
+.loading-content {
+   	position: absolute;
+   	top: 40%;
+   	left: 45%;
 }
 
 form {
@@ -667,13 +702,13 @@ form {
 
   /* 4 columns */
   .col-4 {
-    width: 33.33%;
+    	width: 33.33%;
   }
 
   /* 6 columns */
   .col-6 {
-    width: 50%;
-    margin-left: 25%;
+    	width: 50%;
+    	margin-left: 25%;
   }
 
   .col-8 {
@@ -687,6 +722,6 @@ form {
 
   /* 12 columns */
   .col-12 {
-    width: 100%;
+    	width: 100%;
   }  
 }

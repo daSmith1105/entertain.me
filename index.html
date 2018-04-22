@@ -2,13 +2,12 @@
 	<html lang="en">
 		<head>
 			<title>Event app</title>
-			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+			<meta name="apple-mobile-web-app-capable" content="yes">
+			<meta name="apple-mobile-web-app-status-bar-style" content="black">
 			<link rel="stylesheet" href="main.css">
 			<link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
-			<script
-			  src="https://code.jquery.com/jquery-3.2.1.min.js"
-	          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	          crossorigin="anonymous"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		 </head>
 		<body>
 			<div class="overlay">
@@ -118,6 +117,7 @@
 			<nav class="js-slideout">
 				<div class="sidenav">
 					<a href="#" class="closebtn hover">&times;</a>
+					<a href="#" class="home">Start a New Search</a>
 					<a href="#" id="music">Concerts</a>
 					<a href="#" id="conference">Conferences</a>
 					<a href="#" id="comedy">Comedy</a>
@@ -144,7 +144,13 @@
 					<a href="#" id="technology">Technology</a>
 					<a href="#" id="other">Other</a>
 				</div>
-			</nav> 
+			</nav>
+			<div class="loading hide">
+  				<div class="loading-content hide">
+    					<p>Loading...</p><br>
+ 					<img class="loading-img" src="https://media.giphy.com/media/692H47S5CLWwg/giphy.gif" alt="loading img">
+				</div>
+			</div> 
 			<div class="js-no-result no-result col-6 hide">
 				<div class="js-no-result-close no-result-close hover">&times;</div>
 				<img class="no-icon" src="https://cdn.iconscout.com/public/images/icon/premium/png-512/clean-cleaning-shine-35645ac48be64257-512x512.png" alt="no result icon">
