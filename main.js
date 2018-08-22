@@ -1,6 +1,6 @@
 "use strict";
 
-const EVENT_SEARCH_URL = 'http://api.eventful.com/json/events/search';
+const EVENT_SEARCH_URL = 'https://api.eventful.com/json/events/search';
 const ALT_PROXY = "https://david-proxy.herokuapp.com/json/events/search";
 const api_key = 'FNKcDXFQvSBbpBvQ';
 let currentKeyword = "";
@@ -266,6 +266,7 @@ function getDataFromApi(term, local, range, category, page, callback) {
     page_size: 4,
     page_number: currentPage,
 	app_key: api_key,
+	dataType: 'jsonp',
 	scheme: 'https'
   }
   	$.getJSON(EVENT_SEARCH_URL, query, callback);
