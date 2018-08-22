@@ -1,6 +1,6 @@
 "use strict";
 
-const EVENT_SEARCH_URL = 'http://api.eventful.com/json/events/search';
+const EVENT_SEARCH_URL = 'https://api.eventful.com/json/events/search';
 const PROXY_SEARCH = "http://david-proxy.bitbakeryapps.in/json/events/search";
 const ALT_PROXY = "https://david-proxy.herokuapp.com/json/events/search";
 const api_key = 'FNKcDXFQvSBbpBvQ';
@@ -11,13 +11,13 @@ let currentRadius = "";
 let currentPage = 1;
 
 
-// function getCurrentLocation () {
-//         $.getJSON("http://ip-api.com/json/?callback=?", function(data) {
-// 	   	console.log(`${data.zip}`);
-// 	   	$('.js-location-query').val(`${data.zip}`);
-// 	   	currentLocation = `${data.zip}`;
-// 	});
-// }
+function getCurrentLocation () {
+        $.getJSON("https://ip-api.com/json/?callback=?", function(data) {
+	   	console.log(`${data.zip}`);
+	   	$('.js-location-query').val(`${data.zip}`);
+	   	currentLocation = `${data.zip}`;
+	});
+}
 
 function changeSearchLocation() {
 	$('.change-location-button').on('click', function() {
@@ -211,6 +211,7 @@ function renderResult(result) {
 	console.log(result);
  	if (result.image !== null) {
 		console.log(`${result.image.medium.url}`);
+		const trimmed_url = 
 		$('.cPage').html(currentPage);
 		return `
 	    <div class="individual-result col-10">
@@ -267,7 +268,7 @@ function getDataFromApi(term, local, range, category, page, callback) {
     page_number: currentPage,
     app_key: api_key
   }
-  	$.getJSON(ALT_PROXY, query, callback);
+  	$.getJSON(EVENT_SEARCH_URL, query, callback);
 }
 
 function watchSplash() {
