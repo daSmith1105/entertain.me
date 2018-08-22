@@ -1,6 +1,6 @@
 "use strict";
 
-const EVENT_SEARCH_URL = 'https://api.eventful.com/json/events/search';
+const EVENT_SEARCH_URL = 'https://crossorigin.me/https://api.eventful.com/json/events/search';
 const api_key = 'FNKcDXFQvSBbpBvQ';
 let currentKeyword = "";
 let currentLocation = "";
