@@ -15,7 +15,7 @@
 
 .overlay {
 	background-image: linear-gradient(rgba(255, 246, 0, 0.3), rgba(0, 0, 100, 0.6)),
-    	url('http://static1.squarespace.com/static/55c37beae4b0336075603f86/55c3cd80e4b01531b3208f2e/5603032be4b008bd0ad4e6fb/1486126957019/?format=1000w');
+    	url('https://static1.squarespace.com/static/55c37beae4b0336075603f86/55c3cd80e4b01531b3208f2e/5603032be4b008bd0ad4e6fb/1486126957019/?format=1000w');
     	height: 100vh;
     	width: 100vw;
 	background-size: cover;
