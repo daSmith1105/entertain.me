@@ -265,8 +265,7 @@ function getDataFromApi(term, local, range, category, page, callback) {
     sort_order: 'date',
     page_size: 4,
     page_number: currentPage,
-	app_key: api_key,
-	scheme: 'https'
+	app_key: api_key
   }
   	$.getJSON(EVENT_SEARCH_URL, query, callback);
 }
@@ -305,7 +304,7 @@ function watchMainSubmit() {
 }
 
 function appLoad() {
-	// getCurrentLocation();
+	getCurrentLocation();
 	watchSplash();
 	watchMainSubmit();
 	sideNavToggle();
