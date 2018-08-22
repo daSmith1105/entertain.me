@@ -1,5 +1,5 @@
 # Entertain.Me              
-http://entertain.bitbakeryapps.in/
+https://dasmith1105.github.io/entertain.me/
 
 *Finding local events is easy with Entertain.Me. Food, Music, Family events, and more at the click of a button. Let's do something!*
 
