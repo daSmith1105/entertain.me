@@ -2,7 +2,7 @@
 
 const EVENT_SEARCH_URL = 'http://api.eventful.com/json/events/search';
 const PROXY_SEARCH = "http://david-proxy.bitbakeryapps.in/json/events/search";
-const ALT_PROXY = "http://david-proxy.herokuapp.com/json/events/search";
+const ALT_PROXY = "https://david-proxy.herokuapp.com/json/events/search";
 const api_key = 'FNKcDXFQvSBbpBvQ';
 let currentKeyword = "";
 let currentLocation = "";
@@ -11,13 +11,13 @@ let currentRadius = "";
 let currentPage = 1;
 
 
-function getCurrentLocation () {
-        $.getJSON("http://ip-api.com/json/?callback=?", function(data) {
-	   	console.log(`${data.zip}`);
-	   	$('.js-location-query').val(`${data.zip}`);
-	   	currentLocation = `${data.zip}`;
-	});
-}
+// function getCurrentLocation () {
+//         $.getJSON("http://ip-api.com/json/?callback=?", function(data) {
+// 	   	console.log(`${data.zip}`);
+// 	   	$('.js-location-query').val(`${data.zip}`);
+// 	   	currentLocation = `${data.zip}`;
+// 	});
+// }
 
 function changeSearchLocation() {
 	$('.change-location-button').on('click', function() {
@@ -304,7 +304,7 @@ function watchMainSubmit() {
 }
 
 function appLoad() {
-	getCurrentLocation();
+	// getCurrentLocation();
 	watchSplash();
 	watchMainSubmit();
 	sideNavToggle();
