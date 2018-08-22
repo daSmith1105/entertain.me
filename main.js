@@ -1,6 +1,6 @@
 "use strict";
 
-const EVENT_SEARCH_URL = 'https://api.eventful.com/json/events/search';
+const EVENT_SEARCH_URL = 'http://api.eventful.com/json/events/search';
 const ALT_PROXY = "https://david-proxy.herokuapp.com/json/events/search";
 const api_key = 'FNKcDXFQvSBbpBvQ';
 let currentKeyword = "";
