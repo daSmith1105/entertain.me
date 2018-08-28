@@ -267,7 +267,7 @@ function getDataFromApi(term, local, range, category, page, callback) {
     page_number: currentPage,
 	app_key: api_key
   }
-  	$.getJSON(EVENT_SEARCH_URL, query, callback);
+  	$.getJSON(ALT_PROXY, query, callback);
 }
 
 function watchSplash() {
