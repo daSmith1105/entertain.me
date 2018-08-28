@@ -1,7 +1,8 @@
 "use strict";
 
-const EVENT_SEARCH_URL = "https://crossorigin.me/http://api.eventful.com/json/events/search";
-const ALT_PROXY = "https://david-proxy.herokuapp.com/json/events/search";
+const EVENT_SEARCH_URL = 'http://api.eventful.com/json/events/search';
+const PROXY_SEARCH = "http://david-proxy.bitbakeryapps.in/json/events/search";
+const ALT_PROXY = "http://david-proxy.herokuapp.com/json/events/search";
 const api_key = 'FNKcDXFQvSBbpBvQ';
 let currentKeyword = "";
 let currentLocation = "";
@@ -210,7 +211,6 @@ function renderResult(result) {
 	console.log(result);
  	if (result.image !== null) {
 		console.log(`${result.image.medium.url}`);
-		const trimmed_url = 
 		$('.cPage').html(currentPage);
 		return `
 	    <div class="individual-result col-10">
@@ -265,7 +265,7 @@ function getDataFromApi(term, local, range, category, page, callback) {
     sort_order: 'date',
     page_size: 4,
     page_number: currentPage,
-	app_key: api_key
+    app_key: api_key
   }
   	$.getJSON(ALT_PROXY, query, callback);
 }
