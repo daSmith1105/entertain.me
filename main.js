@@ -11,13 +11,13 @@ let currentRadius = "";
 let currentPage = 1;
 
 
-function getCurrentLocation () {
-        $.getJSON("http://ip-api.com/json/?callback=?", function(data) {
-	   	console.log(`${data.zip}`);
-	   	$('.js-location-query').val(`${data.zip}`);
-	   	currentLocation = `${data.zip}`;
-	});
-}
+// function getCurrentLocation () {
+//         $.getJSON("http://ip-api.com/json/?callback=?", function(data) {
+// 	   	console.log(`${data.zip}`);
+// 	   	$('.js-location-query').val(`${data.zip}`);
+// 	   	currentLocation = `${data.zip}`;
+// 	});
+// }
 
 function changeSearchLocation() {
 	$('.change-location-button').on('click', function() {
@@ -170,7 +170,9 @@ function previousPage() {
 }
 
 function displayDetails(address) {
-	$('.external-site').html(`<object class="embed col-10" data=${address} />`);
+	const modUrl = address.subString(4);
+	console.log(modUrl);
+	$('.external-site').html(`<object class="embed col-10" data="https" + ${modUrl} />`);
 	$('.result-nav').addClass('hide');
 	$('.category-container').addClass('hide');
 	$('.result-alert').addClass('hide');
@@ -304,7 +306,7 @@ function watchMainSubmit() {
 }
 
 function appLoad() {
-	getCurrentLocation();
+	// getCurrentLocation();
 	watchSplash();
 	watchMainSubmit();
 	sideNavToggle();
