@@ -171,7 +171,7 @@ function previousPage() {
 
 function displayDetails(address) {
 	const mod = address.slice(4, address.length);
-	const modUrl = "https" + mod;
+	const modUrl = `https${mod}`;
 	console.log(`address: ${address}`)
 	console.log(`modified: ${modUrl}`);
 	$('.external-site').html(`<object class="embed col-10" data=${modUrl} />`);
