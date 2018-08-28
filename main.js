@@ -1,6 +1,6 @@
 "use strict";
 
-const EVENT_SEARCH_URL = 'https://api.eventful.com/jsonp/events/search';
+const EVENT_SEARCH_URL = "http://cors.io/?https://api.eventful.com/json/events/search";
 const ALT_PROXY = "https://david-proxy.herokuapp.com/json/events/search";
 const api_key = 'FNKcDXFQvSBbpBvQ';
 let currentKeyword = "";
@@ -11,7 +11,7 @@ let currentPage = 1;
 
 
 function getCurrentLocation () {
-        $.getJSON("https://ip-api.com/json/?callback=?", function(data) {
+        $.getJSON("http://ip-api.com/json/?callback=?", function(data) {
 	   	console.log(`${data.zip}`);
 	   	$('.js-location-query').val(`${data.zip}`);
 	   	currentLocation = `${data.zip}`;
