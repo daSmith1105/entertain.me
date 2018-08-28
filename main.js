@@ -170,8 +170,9 @@ function previousPage() {
 }
 
 function displayDetails(address) {
-	const modUrl = address.toString().subString(4);
-	console.log(modUrl);
+	const modUrl = address.slice(0, (address.length - 1));
+	console.log(`address: ${address}`)
+	console.log(`modified: ${modUrl}`);
 	$('.external-site').html(`<object class="embed col-10" data="https" + ${modUrl} />`);
 	$('.result-nav').addClass('hide');
 	$('.category-container').addClass('hide');
