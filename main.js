@@ -170,7 +170,7 @@ function previousPage() {
 }
 
 function displayDetails(address) {
-	const modUrl = address.toString().slice(0, (address.length - 1));
+	const modUrl = address.slice(3, address.length);
 	console.log(`address: ${address}`)
 	console.log(`modified: ${modUrl}`);
 	$('.external-site').html(`<object class="embed col-10" data="https" + ${modUrl} />`);
