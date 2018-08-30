@@ -231,7 +231,7 @@ function renderResult(result) {
 		$('.cPage').html(currentPage);
 		return `
 	    <div class="individual-result col-10">
-			<img class="descImg" src="https://png.icons8.com/ios/1600/no-camera.png" alt="no image available">
+			<img class="descImg" src="./resources/no-camera.png" alt="no image available">
 			<div class="info-container">
 				<p class="title">${result.title}</p>
 				<p class="time">${result.start_time}</p>
