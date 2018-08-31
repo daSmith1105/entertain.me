@@ -26,10 +26,6 @@ function changeSearchLocation() {
 		currentLocation = $('.js-change-location').val();
 		currentRadius = currentRadius ;
     	currentCategory = currentCategory;
-		console.log(currentKeyword);
-    	console.log(currentLocation);
-    	console.log(currentRadius);
-    	console.log(currentCategory);
     	currentPage = 1;
     	$('.js-change-location').val('');
 		getDataFromApi(currentKeyword, currentLocation, currentRadius, currentCategory, currentPage, displaySearchData);
@@ -99,7 +95,6 @@ function ajaxLoad() {
 function noResultToggle() {
 	$('.js-no-result').removeClass('hide');
 	currentPage = currentPage - 1;
-	console.log('no results found');
 //modal close
 	$('.js-no-result-close').on('click', function(){
     		$('.js-no-result').addClass('hide');
@@ -117,10 +112,6 @@ function setByCategoryNav() {
     			currentRadius = 10;
     			currentCategory = "";
     			currentCategory = event.currentTarget.id;
-    			console.log(currentKeyword);
-    			console.log(currentLocation);
-    			console.log(currentRadius);
-    			console.log(currentCategory);
     			currentPage = 1;
     			$('.previous-page').addClass('hide');
     			$('.next-page').addClass('hide');
@@ -140,11 +131,6 @@ function nextPage() {
     		currentCategory = currentCategory;
     		currentPage++;
     		checkPageCount(currentPage);
-    		console.log(currentKeyword);
-    		console.log(currentLocation);
-    		console.log(currentRadius);
-    		console.log(currentCategory);
-    		console.log(currentPage);
 
 		getDataFromApi(currentKeyword, currentLocation, currentRadius, currentCategory, currentPage, displaySearchData);
 	});
@@ -159,11 +145,6 @@ function previousPage() {
     		currentCategory = currentCategory;
     		currentPage--;
     		checkPageCount(currentPage);
-    		console.log(currentKeyword);
-    		console.log(currentLocation);
-    		console.log(currentRadius);
-    		console.log(currentCategory);
-    		console.log(currentPage);
 
 		getDataFromApi(currentKeyword, currentLocation, currentRadius, currentCategory, currentPage, displaySearchData);
 	});
@@ -172,8 +153,6 @@ function previousPage() {
 function displayDetails(address) {
 	const mod = address.slice(4, address.length);
 	const modUrl = `https` + mod;
-	console.log(`address: ${address}`)
-	console.log(`modified: ${modUrl}`);
 	$('.external-site').html(`<object class="embed col-10" data=${modUrl} />`);
 	$('.result-nav').addClass('hide');
 	$('.category-container').addClass('hide');
@@ -212,9 +191,7 @@ function checkPageCount(page) {
 }
 
 function renderResult(result) {
-	console.log(result);
  	if (result.image !== null) {
-		console.log(`${result.image.medium.url}`);
 		$('.cPage').html(currentPage);
 		return `
 	    <div class="individual-result col-10">
@@ -296,10 +273,6 @@ function watchMainSubmit() {
     currentLocation = queryLocation.val();
     currentRadius = queryRadius.val();
     currentCategory = queryCategory.val();
-    console.log(currentKeyword);
-    console.log(currentLocation);
-    console.log(currentRadius);
-    console.log(currentCategory);
     queryRadius.val("10");
     queryLocation.val("");
 
